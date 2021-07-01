@@ -17,14 +17,12 @@ import {
   CodePane,
   Notes,
   Link,
-  Grid,
 } from "spectacle";
 import sytacLogo from "./logo.svg";
 import abnLogo from "./abn-amro-logo.svg";
 import neo4jLogo from "./neo4j-logo.svg";
 import propertyGraphElements from "./property_graph_elements.jpeg";
 import playCypher from "./play-cypher.png";
-import movies from "./movies.png";
 import node from "./node.png";
 import relationship from "./relationship.png";
 import properties from "./properties.png";
