@@ -89,10 +89,7 @@ const Presentation = () => (
           </ListItem>
         </Appear>
         <Appear>
-          <ListItem>Frontend developer(⚛︎) 🤔</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Ok ok, I am Software engineer 🤓</ListItem>
+          <ListItem>I am Software engineer 🤓</ListItem>
         </Appear>
         <Appear>
           <ListItem>🇪🇸: 🥘 💃 </ListItem>
@@ -112,104 +109,50 @@ const Presentation = () => (
       </FlexBox>
     </Slide>
     <Slide>
-      <Heading>What is graph database?</Heading>
-      <UnorderedList>
-        <Appear>
-          <ListItem>NoSQL type</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Graph structures/models</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Nodes</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Edges/Relationships</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Properties</ListItem>
-        </Appear>
-      </UnorderedList>
-    </Slide>
-    <Slide>
-      <Heading>What is a Node?</Heading>
-      <FlexBox justifyContent="center" height="100%">
-        <Image src={node} />
-      </FlexBox>
-      <Text margin="60px 0px" textAlign="center" fontSize="h3">
-        Represent entities or instances
-      </Text>
-      <Notes>
-        <ul>
-          <li>People, businesses, accounts, or any other item to be tracked</li>
-          <li>The "equivalent" of a record, relation, or row in a relational database</li>
-          <li>A document in a document-store database</li>
-        </ul>
-      </Notes>
-    </Slide>
-    <Slide>
-      <Heading>What is a Edge?</Heading>
-      <FlexBox justifyContent="center" height="100%">
-        <Image src={relationship} />
-      </FlexBox>
-      <Text margin="60px 0px" textAlign="center" fontSize="h3">
-        They are the lines that connect nodes to other nodes
-      </Text>
-      <Notes>
-        <ul>
-          <li>Meaningful patterns emerge when examining the connections</li>
-          <li>It can either be directed or undirected</li>
-          <li>
-            This abstraction is not directly implemented in a relational model or a document-store
-            model.
-          </li>
-        </ul>
-      </Notes>
-    </Slide>
-    <Slide>
-      <Heading>What is Properties?</Heading>
-      <FlexBox justifyContent="center" height="100%">
-        <Image src={properties} />
-      </FlexBox>
-      <Text margin="60px 0px" textAlign="center" fontSize="h3">
-        It is the information associated to nodes
-      </Text>
-    </Slide>
-    <Slide>
-      <Heading>What is a graph structure/model?</Heading>
-      <Text textAlign="center" fontSize="h3">
-        It is an abstract data type that is meant to implement the undirected graph and directed
-        graph concepts from the field of graph theory within a math
-      </Text>
-      <Appear>
-        <Text textAlign="center" fontSize="120px">
-          😕
-        </Text>
-      </Appear>
-      <Notes>
-        <ul>
-          <li>Labeled-property graph</li>
-          <li>Resource Description Framework</li>
-        </ul>
-      </Notes>
-    </Slide>
-    <Slide>
-      <Heading>What is a Labeled-property graph?</Heading>
+      <Heading>Graph structure/model</Heading>
       <FlexBox justifyContent="center" flexDirection="column">
-        <Image src={propertyGraphElements} width="70%" />
-        <Text textAlign="center">
-          It graph model is represented by a set of nodes, relationships, properties, and labels
-        </Text>
+        <Image src={propertyGraphElements} />
       </FlexBox>
       <Notes>
-        <ul>
-          <li>
-            Both nodes and their relationships are named and can store properties represented by
-            key/value pairs
-          </li>
-          <li>Nodes can be labeled to be grouped</li>
-          <li>Relations between node must be directed</li>
-        </ul>
+        <div>
+          <p>Requirements</p>
+          <ul>
+            <li>NoSQL type</li>
+            <li>Graph structures/models</li>
+            <li>Nodes</li>
+            <li>Edges/Relationships</li>
+            <li>Properties</li>
+          </ul>
+        </div>
+        <div>
+          <p>Nodes</p>
+          <ul>
+            <li>Represent entities or instances</li>
+            <li>People, businesses, accounts, or any other item to be tracked</li>
+            <li>The "equivalent" of a record, relation, or row in a relational database</li>
+            <li>A document in a document-store database</li>
+            <li>Nodes can be labeled to be grouped</li>
+          </ul>
+        </div>
+        <div>
+          <p>Edges</p>
+          <ul>
+            <li>They are the lines that connect nodes to other nodes</li>
+            <li>Meaningful patterns emerge when examining the connections</li>
+            <li>It can either be directed or undirected</li>
+            <li>
+              This abstraction is not directly implemented in a relational model or a document-store
+              model.
+            </li>
+            <li>Relations between node must be directed</li>
+          </ul>
+        </div>
+        <div>
+          <p>Properties</p>
+          <ul>
+            <li>It is the information associated to nodes</li>
+          </ul>
+        </div>
       </Notes>
     </Slide>
     <Slide>
@@ -227,6 +170,26 @@ const Presentation = () => (
             constant-time operation and allows you to quickly traverse millions of connections per
             second per core
           </ListItem>
+        </Appear>
+      </UnorderedList>
+    </Slide>
+    <Slide>
+      <Heading>Some use cases</Heading>
+      <UnorderedList>
+        <Appear>
+          <ListItem>Recommendations(likes, rating, friends, etc.)</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Fraud detection</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Data science</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Networks</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Tax calculation</ListItem>
         </Appear>
       </UnorderedList>
     </Slide>
@@ -264,28 +227,9 @@ const Presentation = () => (
     </Slide>
     <Slide>
       <Heading>What is Cypher?</Heading>
-      <Text textAlign="center" fontSize="h3">
+      <Text textAlign="center">
         Graph query language that allows users to store and retrieve data from the graph database
       </Text>
-      <Notes>
-        <ol>
-          <li>
-            Syntax provides a visual and logical way to match patterns of nodes and relationships in
-            the graph
-          </li>
-          <li>
-            It is a declarative, SQL-inspired language for describing visual patterns in graphs
-            using ASCII-Art syntax
-          </li>
-          <li>
-            Users can construct expressive and efficient queries to handle needed CRUD functionality
-          </li>
-          <li>It is also open source</li>
-        </ol>
-      </Notes>
-    </Slide>
-    <Slide>
-      <Heading>How Cypher look's like?</Heading>
       <FlexBox style={{ flexFlow: "wrap" }} justifyContent="space-between" alignItems="flex-start">
         <FlexBox width="53%" flexDirection="column" style={{ flexFlow: "wrap" }}>
           <Text textAlign="center">SQL</Text>
@@ -306,61 +250,45 @@ RETURN p2.name
         `}</CodePane>
         </FlexBox>
       </FlexBox>
+      <Notes>
+        <ol>
+          <li>
+            Syntax provides a visual and logical way to match patterns of nodes and relationships in
+            the graph
+          </li>
+          <li>
+            It is a declarative, SQL-inspired language for describing visual patterns in graphs
+            using ASCII-Art syntax
+          </li>
+          <li>
+            Users can construct expressive and efficient queries to handle needed CRUD functionality
+          </li>
+          <li>It is also open source</li>
+        </ol>
+      </Notes>
     </Slide>
     <Slide>
-      <Heading>Introduction to Cypher</Heading>
+      <Heading>Demo: Fraud detection</Heading>
       <UnorderedList>
-        <Appear>
-          <ListItem>
-            Go to{" "}
-            <Link target="blank" href="https://neo4j.com/sandbox/?ref=developer-start">
-              Neo4j sandbox
-            </Link>
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Click into 'Launch the Free Sandbox'</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Login with any of the SSO options</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Click 'New project' --> 'Blank sandbox'</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Click 'Open'</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-            Write in the 'neo4j$' input -> <CodeSpan>:play cypher</CodeSpan>
-          </ListItem>
-        </Appear>
-      </UnorderedList>
-    </Slide>
-    <Slide>
-      <Heading>Introduction to Cypher</Heading>
-      <FlexBox>
-        <Image src={playCypher} width={500}></Image>
-      </FlexBox>
-    </Slide>
-    <Slide>
-      <Heading>Some use cases</Heading>
-      <UnorderedList>
-        <Appear>
-          <ListItem>Recommendations(likes, rating, friends, etc.)</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Data science</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Networks</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Fraud detection</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Tax calculation</ListItem>
-        </Appear>
+        <ListItem>
+          Go to{" "}
+          <Link target="blank" href="https://neo4j.com/sandbox/?ref=developer-start">
+            Neo4j sandbox
+          </Link>
+        </ListItem>
+
+        <ListItem>Click into 'Launch the Free Sandbox'</ListItem>
+
+        <ListItem>Login with any of the SSO options</ListItem>
+
+        <ListItem>Click 'New project' --> 'Fraud detection'</ListItem>
+
+        <ListItem>Click 'Open'</ListItem>
+
+        <ListItem>
+          Write in the 'neo4j$' input ->{" "}
+          <CodeSpan>:play https://guides.neo4j.com/sandbox/fraud-detection/index.html</CodeSpan>
+        </ListItem>
       </UnorderedList>
     </Slide>
     <Slide>
